@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://bkms70es04f5s"]
 
-[ext_resource type="Script" path="res://Scene/guard_1.gd" id="1_hfh4o"]
+[ext_resource type="Script" path="res://Scripts/guard_1.gd" id="1_hfh4o"]
 [ext_resource type="Texture2D" uid="uid://k4wirv18upyk" path="res://Assets/sprites/knight.png" id="1_xq37i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8l501"]
@@ -231,6 +231,7 @@ animations = [{
 size = Vector2(12, 12.875)
 
 [node name="Guard1" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_hfh4o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
