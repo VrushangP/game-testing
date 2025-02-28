@@ -3,7 +3,7 @@ extends Node2D
 @onready var player = get_tree().get_first_node_in_group("Guard1")
 @onready var label = $Label
 
-const base_text = "{e} to"
+const base_text = "[E] to "
 
 var active_areas = []
 var can_interact = true
@@ -38,7 +38,7 @@ func _input(event):
 		if active_areas.size() > 0:
 			can_interact = false
 			label.hide()
-			
+
 			await active_areas[0].interact.call()
 			
 			can_interact = true

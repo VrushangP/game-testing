@@ -18,6 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 InteractionManager="*res://Interactables/Static/interaction_manager.tscn"
+ScreenFilter="*res://Interactables/Static/screen_filter.tscn"
+
+[global_group]
+
+Guard1=""
 
 [input]
 

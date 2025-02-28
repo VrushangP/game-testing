@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://paq5v132xbna"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_6rgs3"]
+[ext_resource type="PackedScene" uid="uid://ccm0kno611x57" path="res://Interactables/Static/interaction_area.tscn" id="1_kfej1"]
+[ext_resource type="Texture2D" uid="uid://dloutisrixs51" path="res://Assets/sprites/slime_green.png" id="3_3tuq4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtiy1"]
+size = Vector2(32.5, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ud5by"]
+size = Vector2(56, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecaoh"]
+atlas = ExtResource("3_3tuq4")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d05s"]
+atlas = ExtResource("3_3tuq4")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cokd"]
+atlas = ExtResource("3_3tuq4")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kouwt"]
+atlas = ExtResource("3_3tuq4")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpx5s"]
+atlas = ExtResource("3_3tuq4")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nll4i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecaoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d05s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cokd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kouwt")
+}],
+"loop": false,
+"name": &"active",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpx5s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Item" type="AnimatableBody2D"]
+script = ExtResource("1_6rgs3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qtiy1")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_kfej1")]
+action_name = "Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ud5by")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "ewok;qwmek"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nll4i")
+animation = &"active"
+autoplay = "idle"
