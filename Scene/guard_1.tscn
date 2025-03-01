@@ -235,11 +235,10 @@ collision_layer = 2
 script = ExtResource("1_hfh4o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -5.36)
 sprite_frames = SubResource("SpriteFrames_olymf")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6.5625)
 shape = SubResource("RectangleShape2D_1w1yx")

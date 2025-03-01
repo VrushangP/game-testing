@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://paq5v132xbna"]
+[gd_scene load_steps=13 format=3 uid="uid://paq5v132xbna"]
 
 [ext_resource type="Script" path="res://Scripts/item.gd" id="1_6rgs3"]
 [ext_resource type="PackedScene" uid="uid://ccm0kno611x57" path="res://Interactables/Static/interaction_area.tscn" id="1_kfej1"]
 [ext_resource type="Texture2D" uid="uid://dloutisrixs51" path="res://Assets/sprites/slime_green.png" id="3_3tuq4"]
+[ext_resource type="Texture2D" uid="uid://brn47hqavrv5i" path="res://Assets/sprites/fruit.png" id="4_iptbc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtiy1"]
 size = Vector2(32.5, 31)
@@ -71,12 +72,26 @@ action_name = "Open"
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_ud5by")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "ewok;qwmek"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_nll4i")
 animation = &"active"
 autoplay = "idle"
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 160.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(80, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(80, 40)
+scale = Vector2(4.66, 4.66)
+texture = ExtResource("4_iptbc")
+region_enabled = true
+region_rect = Rect2(-1, 16, 16, 16)
