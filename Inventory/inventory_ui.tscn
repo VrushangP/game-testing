@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=3 uid="uid://68jyyt6ur3vn"]
+
+[ext_resource type="Script" path="res://Inventory/inventory_ui.gd" id="1_h2lv3"]
+[ext_resource type="Texture2D" uid="uid://circih5106mw" path="res://Assets/sprites/inventory.png" id="2_xlgke"]
+[ext_resource type="PackedScene" uid="uid://1s8vap8ga8i3" path="res://Inventory/inventory_uislot.tscn" id="3_gowyo"]
+
+[node name="inventory_ui" type="Control"]
+custom_minimum_size = Vector2(183, 126)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 183.0
+offset_bottom = 126.0
+script = ExtResource("1_h2lv3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_xlgke")
+centered = false
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -50.5
+offset_right = 80.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="inventory_uislot4" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot2" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot3" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot5" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot12" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot11" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot10" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot6" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot9" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot7" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="inventory_uislot8" parent="GridContainer" instance=ExtResource("3_gowyo")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -75.0
+offset_top = -15.0
+offset_right = -45.0
+offset_bottom = 15.0
+
+[node name="Panel2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = -15.0
+offset_right = 35.0
+offset_bottom = 15.0
+
+[node name="Panel3" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -35.0
+offset_top = -15.0
+offset_right = -5.0
+offset_bottom = 15.0
+
+[node name="Panel4" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 45.0
+offset_top = -15.0
+offset_right = 75.0
+offset_bottom = 15.0
+
+[node name="Panel5" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -35.0
+offset_top = -50.0
+offset_right = -5.0
+offset_bottom = -20.0
+
+[node name="Panel6" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -35.0
+offset_top = 20.0
+offset_right = -5.0
+offset_bottom = 50.0
+
+[node name="Panel7" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = -50.0
+offset_right = 35.0
+offset_bottom = -20.0
+
+[node name="Panel8" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 45.0
+offset_top = 20.0
+offset_right = 75.0
+offset_bottom = 50.0
+
+[node name="Panel9" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = -45.0
+offset_bottom = -20.0
+
+[node name="Panel10" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 35.0
+offset_bottom = 50.0
+
+[node name="Panel11" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -75.0
+offset_top = 20.0
+offset_right = -45.0
+offset_bottom = 50.0
+
+[node name="Panel12" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 45.0
+offset_top = -50.0
+offset_right = 75.0
+offset_bottom = -20.0

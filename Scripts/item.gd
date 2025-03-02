@@ -4,6 +4,8 @@ extends AnimatableBody2D
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var sprite = $AnimatedSprite2D
 @onready var panel = $Panel
+@onready var inventory: Current_Inventory = preload("res://Inventory/player_inventory.tres")
+
 
 func _ready():
 	panel.visible = false
@@ -16,8 +18,8 @@ func _on_interact():
 
 	if sprite.animation == "idle":
 		sprite.animation = "active"
-		panel.position.x = player.position.x - 100 - 80
-		panel.position.y = player.position.y + 50 - 40
+		panel.global_position.x = player.position.x - 80
+		panel.global_position.y = player.position.y - 40
 		panel.visible = true
 		while true:
 			await get_tree().process_frame

@@ -1,7 +1,9 @@
-[gd_scene load_steps=33 format=3 uid="uid://bkms70es04f5s"]
+[gd_scene load_steps=35 format=3 uid="uid://bkms70es04f5s"]
 
 [ext_resource type="Script" path="res://Scripts/guard_1.gd" id="1_hfh4o"]
 [ext_resource type="Texture2D" uid="uid://k4wirv18upyk" path="res://Assets/sprites/knight.png" id="1_xq37i"]
+[ext_resource type="Resource" uid="uid://fw5jhsyueyrx" path="res://Inventory/player_inventory.tres" id="2_7b3ic"]
+[ext_resource type="PackedScene" uid="uid://68jyyt6ur3vn" path="res://Inventory/inventory_ui.tscn" id="4_joqkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8l501"]
 atlas = ExtResource("1_xq37i")
@@ -233,6 +235,7 @@ size = Vector2(12, 12.875)
 [node name="Guard1" type="CharacterBody2D" groups=["Guard1"]]
 collision_layer = 2
 script = ExtResource("1_hfh4o")
+inventory = ExtResource("2_7b3ic")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5.36)
@@ -242,3 +245,10 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1w1yx")
+
+[node name="inventory_ui" parent="." instance=ExtResource("4_joqkg")]
+offset_left = -82.0
+offset_top = -57.0
+offset_right = 101.0
+offset_bottom = 69.0
+scale = Vector2(0.9, 0.9)
