@@ -20,10 +20,12 @@ config/icon="res://icon.svg"
 InteractionManager="*res://Interactables/Static/interaction_manager.tscn"
 ScreenFilter="*res://Interactables/Static/screen_filter.tscn"
 ItemGraphic="*res://Interactables/Static/item_graphic.tscn"
+ItemManager="*res://Interactables/Static/item_manager.gd"
 
 [global_group]
 
 Guard1=""
+ItemManager="item manager"
 
 [input]
 

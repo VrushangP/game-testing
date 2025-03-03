@@ -1,0 +1,34 @@
+{
+  "items": [
+	{
+	  "id": "letter_1",
+	  "type": "letter",
+	  "name": "Mysterious Letter",
+	  "texture_path": "res://Assets/sprites/image.png",
+	  "position": {
+		"x": 100,
+		"y": -50
+	  }
+	},
+	{
+	  "id": "key_main",
+	  "type": "key",
+	  "name": "Master Key",
+	  "texture_path": "res://Assets/sprites/inventory.png",
+	  "position": {
+		"x": 450,
+		"y": 180
+	  }
+	},
+	{
+	  "id": "flashlight_1",
+	  "type": "flashlight",
+	  "name": "Flashlight",
+	  "texture_path": "res://Assets/sprites/flashlight.png",
+	  "position": {
+		"x": 100,
+		"y": 350
+	  }
+	}
+  ]
+}
