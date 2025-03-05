@@ -22,12 +22,4 @@ func _on_interact():
 		player.global_position.y = 20
 	print(global_position)
 	CameraManager.refresh = true
-
-	
-
-	
 	ScreenFilter.fade_from_darkness()
-
-	#DialogManager.start_dialog(global_position, lines, speech_sound)
-	#sprite.flip_h = true if interaction_area.get_overlapping_bodies()[0].global_position.x < global_position.x else f 
-	#await DialogManager.dialog_finished

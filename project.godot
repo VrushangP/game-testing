@@ -17,10 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractionManager="*res://Interactables/Static/interaction_manager.tscn"
 ScreenFilter="*res://Interactables/Static/screen_filter.tscn"
 ItemManager="*res://Interactables/Static/item_manager.gd"
 CameraManager="*res://Interactables/Static/camera_manager.gd"
+InteractionManager="*res://Interactables/Static/interaction_manager.tscn"
+DialogueManager="*res://Interactables/Static/dialogue_manager.tscn"
 
 [display]
 

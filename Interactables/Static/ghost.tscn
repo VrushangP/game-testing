@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba2saxlfbmwa7"]
+
+[ext_resource type="Texture2D" uid="uid://brn47hqavrv5i" path="res://Assets/sprites/fruit.png" id="1_c6jyg"]
+[ext_resource type="Script" path="res://Interactables/Static/ghost.gd" id="1_o3x4y"]
+[ext_resource type="PackedScene" uid="uid://bbevqr4q3qmel" path="res://Scene/dialogue_area.tscn" id="2_v5eir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t05ut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08hb7"]
+size = Vector2(40, 40)
+
+[node name="ghost" type="AnimatableBody2D"]
+script = ExtResource("1_o3x4y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c6jyg")
+region_enabled = true
+region_rect = Rect2(16, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t05ut")
+
+[node name="Dialogue_area" parent="." instance=ExtResource("2_v5eir")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue_area"]
+shape = SubResource("RectangleShape2D_08hb7")

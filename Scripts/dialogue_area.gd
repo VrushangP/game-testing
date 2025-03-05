@@ -1,5 +1,5 @@
 extends Area2D
-class_name InteractionArea
+class_name DialogueArea
 
 @export var action_name: String = "interact"
 
@@ -14,14 +14,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
 func _on_body_entered(body: Node2D) -> void:
-	print("entered")
+	print("dialogue entered")
 	if body.is_in_group("Guard1"):
-		InteractionManager.register_area(self)
+		DialogueManager.register_area(self)
 	pass # Replace with function body.
 
 func _on_body_exited(body: Node2D) -> void:
-	print("left")
+	print("dialogue left")
 	if body.is_in_group("Guard1"):
-		InteractionManager.unregister_area(self)
+		DialogueManager.unregister_area(self)
 	pass # Replace with function body.

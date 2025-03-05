@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4shtovkkiw62"]
+
+[ext_resource type="Script" path="res://dialogue_manager.gd" id="1_nrp36"]
+[ext_resource type="FontFile" uid="uid://donthbkjwas13" path="res://Assets/fonts/PixelOperator8.ttf" id="2_6xtaj"]
+
+[node name="Dialogue_manager" type="Node2D"]
+script = ExtResource("1_nrp36")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_6xtaj")
+text = "ewkfnowe"
