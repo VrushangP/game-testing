@@ -32,7 +32,7 @@ window/stretch/mode="viewport"
 [global_group]
 
 Guard1=""
-ItemManager="item manager"
+collectible_bodies="items"
 
 [input]
 

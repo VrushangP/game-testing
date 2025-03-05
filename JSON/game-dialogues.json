@@ -1,0 +1,151 @@
+{
+    "characters": {
+        "guard1": {
+            "name": "Captain Marcus",
+            "description": "Stern military guard at the city checkpoint"
+        },
+        "merchant": {
+            "name": "Elara Silverwind", 
+            "description": "Traveling merchant with goods from distant lands"
+        },
+        "mystic": {
+            "name": "Zara the Seer",
+            "description": "Enigmatic fortune teller with mysterious origins"
+        }
+    },
+    "dialogue_points": {
+        "city_checkpoint": {
+            "position": {
+                "x": 1024,
+                "y": 768,
+                "scene": "main_city_entrance"
+            },
+            "interactions": [
+                {
+                    "id": "guard_first_encounter",
+                    "character": "guard1",
+                    "dialogue_sequence": [
+                        {
+                            "speaker": "guard1",
+                            "text": "Halt! State your business in the city.",
+                            "emotion": "stern",
+                            "response_options": [
+                                {
+                                    "text": "I'm a traveler seeking work",
+                                    "next_dialogue": "traveler_response"
+                                },
+                                {
+                                    "text": "None of your concern",
+                                    "next_dialogue": "hostile_response"
+                                }
+                            ]
+                        },
+                        {
+                            "speaker": "player",
+                            "id": "traveler_response",
+                            "text": "I'm looking for work and shelter.",
+                            "emotion": "humble"
+                        },
+                        {
+                            "speaker": "guard1",
+                            "id": "hostile_response",
+                            "text": "Watch your tone, stranger. These walls are well-guarded.",
+                            "emotion": "angry"
+                        }
+                    ]
+                }
+            ]
+        },
+        "merchant_square": {
+            "position": {
+                "x": 1536,
+                "y": 512,
+                "scene": "central_marketplace"
+            },
+            "interactions": [
+                {
+                    "id": "merchant_trade_intro",
+                    "character": "merchant",
+                    "dialogue_sequence": [
+                        {
+                            "speaker": "merchant",
+                            "text": "Greetings, traveler! Interested in exotic wares from distant kingdoms?",
+                            "emotion": "friendly",
+                            "response_options": [
+                                {
+                                    "text": "What do you have?",
+                                    "next_dialogue": "show_inventory"
+                                },
+                                {
+                                    "text": "Not today",
+                                    "next_dialogue": "farewell"
+                                }
+                            ]
+                        },
+                        {
+                            "speaker": "merchant", 
+                            "id": "show_inventory",
+                            "text": "I've rare silks, enchanted trinkets, and maps to forgotten lands!",
+                            "emotion": "excited"
+                        },
+                        {
+                            "speaker": "merchant",
+                            "id": "farewell", 
+                            "text": "May the winds of fortune guide you, traveler.",
+                            "emotion": "neutral"
+                        }
+                    ]
+                }
+            ]
+        },
+        "mystic_quarters": {
+            "position": {
+                "x": 256,
+                "y": 1024,
+                "scene": "mystical_district"
+            },
+            "interactions": [
+                {
+                    "id": "mystic_prophecy",
+                    "character": "mystic",
+                    "dialogue_sequence": [
+                        {
+                            "speaker": "mystic",
+                            "text": "I sense a great journey awaits you...",
+                            "emotion": "mysterious",
+                            "response_options": [
+                                {
+                                    "text": "What do you see?",
+                                    "next_dialogue": "reveal_prophecy"
+                                },
+                                {
+                                    "text": "I don't believe in prophecies",
+                                    "next_dialogue": "dismissive_response"
+                                }
+                            ]
+                        },
+                        {
+                            "speaker": "mystic",
+                            "id": "reveal_prophecy",
+                            "text": "Shadows gather. A choice will shape the fate of kingdoms.",
+                            "emotion": "cryptic"
+                        },
+                        {
+                            "speaker": "mystic", 
+                            "id": "dismissive_response",
+                            "text": "Belief matters not. The threads of destiny weave themselves.",
+                            "emotion": "calm"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "global_variables": {
+        "game_progression": {
+            "initial_encounter_completed": false,
+            "merchant_reputation": 0,
+            "mystic_prophecy_revealed": false
+        }
+    }
+}
