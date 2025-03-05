@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2lytkcytwvtb"]
+
+[ext_resource type="FontFile" uid="uid://dibh2m6e6wqpq" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="1_h7r4g"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h7r4g")
+theme_override_font_sizes/font_size = 30
+text = "Volume"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h7r4g")
+theme_override_font_sizes/font_size = 30
+text = "Background Music"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_h7r4g")
+theme_override_font_sizes/font_size = 30
+text = "Sound Effects
+"
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+rounded = true
+
+[node name="HSlider2" type="HSlider" parent="MarginContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+rounded = true
+
+[node name="HSlider3" type="HSlider" parent="MarginContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+rounded = true

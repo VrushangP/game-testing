@@ -1,57 +1,64 @@
-[gd_resource type="Resource" script_class="Item_Locations" load_steps=10 format=3]
+[gd_resource type="Resource" script_class="Item_Locations" load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://resources/item_description.gd" id="1_6adbc"]
 [ext_resource type="Script" path="res://resources/item_locations.gd" id="2_bcysm"]
 
-[sub_resource type="Resource" id="Resource_x7mla"]
+[sub_resource type="Resource" id="Resource_lxnca"]
 script = ExtResource("1_6adbc")
 name = "lab_door_exterior"
 description = ""
 position_x = 111.0
 position_y = 22.0
 
-[sub_resource type="Resource" id="Resource_b5vyf"]
+[sub_resource type="Resource" id="Resource_688tb"]
 script = ExtResource("1_6adbc")
 name = "lab_door_interior"
 description = ""
 position_x = -633.0
 position_y = 45.0
 
-[sub_resource type="Resource" id="Resource_2ecou"]
-script = ExtResource("1_6adbc")
-name = "item"
-description = ""
-position_x = -330.0
-position_y = -102.0
-
-[sub_resource type="Resource" id="Resource_t87bc"]
-script = ExtResource("1_6adbc")
-name = "ghost"
-description = ""
-position_x = 267.0
-position_y = -53.0
-
-[sub_resource type="Resource" id="Resource_bxsge"]
+[sub_resource type="Resource" id="Resource_0xl2h"]
 script = ExtResource("1_6adbc")
 name = "hallway_door_exterior"
 description = ""
 position_x = -600.5
 position_y = -107.0
 
-[sub_resource type="Resource" id="Resource_u8etr"]
+[sub_resource type="Resource" id="Resource_8el4m"]
 script = ExtResource("1_6adbc")
 name = "hallway_door_interior"
 description = ""
 position_x = -784.0
 position_y = -320.0
 
-[sub_resource type="Resource" id="Resource_v7tn6"]
+[sub_resource type="Resource" id="Resource_21uc3"]
 script = ExtResource("1_6adbc")
 name = "forum_door_exterior"
 description = ""
 position_x = -416.0
 position_y = -320.0
 
+[sub_resource type="Resource" id="Resource_e4tps"]
+script = ExtResource("1_6adbc")
+name = "forum_door_interior"
+description = ""
+position_x = 23.0
+position_y = -312.0
+
+[sub_resource type="Resource" id="Resource_fk4nt"]
+script = ExtResource("1_6adbc")
+name = "item"
+description = ""
+position_x = -330.0
+position_y = -102.0
+
+[sub_resource type="Resource" id="Resource_xv5ck"]
+script = ExtResource("1_6adbc")
+name = "ghost"
+description = ""
+position_x = 267.0
+position_y = -53.0
+
 [resource]
 script = ExtResource("2_bcysm")
-items = Array[ExtResource("1_6adbc")]([SubResource("Resource_x7mla"), SubResource("Resource_b5vyf"), SubResource("Resource_2ecou"), SubResource("Resource_t87bc"), SubResource("Resource_bxsge"), SubResource("Resource_u8etr"), SubResource("Resource_v7tn6")])
+items = Array[ExtResource("1_6adbc")]([SubResource("Resource_lxnca"), SubResource("Resource_688tb"), SubResource("Resource_0xl2h"), SubResource("Resource_8el4m"), SubResource("Resource_21uc3"), SubResource("Resource_e4tps"), SubResource("Resource_fk4nt"), SubResource("Resource_xv5ck")])
