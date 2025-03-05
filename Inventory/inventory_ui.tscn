@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://1s8vap8ga8i3" path="res://Inventory/inventory_uislot.tscn" id="3_gowyo"]
 
 [node name="inventory_ui" type="Control"]
+visible = false
 custom_minimum_size = Vector2(183, 126)
 layout_mode = 3
 anchors_preset = 0

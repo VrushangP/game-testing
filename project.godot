@@ -19,8 +19,14 @@ config/icon="res://icon.svg"
 
 InteractionManager="*res://Interactables/Static/interaction_manager.tscn"
 ScreenFilter="*res://Interactables/Static/screen_filter.tscn"
-ItemGraphic="*res://Interactables/Static/item_graphic.tscn"
 ItemManager="*res://Interactables/Static/item_manager.gd"
+CameraManager="*res://Interactables/Static/camera_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [global_group]
 

@@ -6,6 +6,7 @@ class_name UpdatedItem
 @onready var sprite = $AnimatedSprite2D
 @onready var sprite2d = $Sprite2D
 @onready var panel = $Panel
+@onready var label = $Label
 @onready var inventory: Current_Inventory = preload("res://Inventory/player_inventory.tres")
 
 var new_item = Inventory.new()  # Create a new inventory item
@@ -51,6 +52,9 @@ func _on_interact():
 
 	if sprite.animation == "idle":
 		sprite2d.visible = true
+		label.global_position.x = player.global_position.x - 80
+		label.global_position.y = player.global_position.y + 20
+		label.text = item_data.name
 		sprite.animation = "active"
 		panel.global_position.x = player.position.x - 80
 		panel.global_position.y = player.position.y - 40
@@ -62,18 +66,6 @@ func _on_interact():
 				panel.visible = false
 				sprite2d.visible = false
 				break
-
-
-#func add_item():
-	#for i in range(inventory.items.size()):
-		#if inventory.items[i] == null:
-		## Found an empty slot, add the item here
-			#new_item.name = "Letter"
-			#new_item.texture = load("res://Assets/sprites/image.png")
-			#inventory.items[i] = new_item
-			#print("Added item at index: " + str(i))
-			#item_present = false
-			#break  # Exit the loop once we've added the item
 
 
 func add_item():

@@ -14,13 +14,15 @@ func _on_interact():
 	
 	await get_tree().create_timer(0.6).timeout
 
-	if global_position.x == -102 && global_position.y == -53:
-		player.global_position.x = -400  # Move the player 50 pixels to the right
-		player.global_position.y = 0
-	elif global_position.x == -371 && global_position.y == 13:
-		player.global_position.x = 0  # Move the player 50 pixels to the right
-		player.global_position.y = 0
+	if global_position.x == 113 && global_position.y == 8:
+		player.global_position.x = -633  # Move the player 50 pixels to the right
+		player.global_position.y = 45
+	elif global_position.x == -633 && global_position.y == 45:
+		player.global_position.x = 111  # Move the player 50 pixels to the right
+		player.global_position.y = 20
 	print(global_position)
+	CameraManager.refresh = true
+
 	
 
 	
