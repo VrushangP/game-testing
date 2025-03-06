@@ -3,56 +3,56 @@
 [ext_resource type="Script" path="res://resources/item_description.gd" id="1_6adbc"]
 [ext_resource type="Script" path="res://resources/item_locations.gd" id="2_bcysm"]
 
-[sub_resource type="Resource" id="Resource_lxnca"]
+[sub_resource type="Resource" id="Resource_nhqh4"]
 script = ExtResource("1_6adbc")
 name = "lab_door_exterior"
 description = ""
 position_x = 111.0
 position_y = 22.0
 
-[sub_resource type="Resource" id="Resource_688tb"]
+[sub_resource type="Resource" id="Resource_7rxue"]
 script = ExtResource("1_6adbc")
 name = "lab_door_interior"
 description = ""
 position_x = -633.0
 position_y = 45.0
 
-[sub_resource type="Resource" id="Resource_0xl2h"]
+[sub_resource type="Resource" id="Resource_th2dp"]
 script = ExtResource("1_6adbc")
 name = "hallway_door_exterior"
 description = ""
 position_x = -600.5
 position_y = -107.0
 
-[sub_resource type="Resource" id="Resource_8el4m"]
+[sub_resource type="Resource" id="Resource_6axvf"]
 script = ExtResource("1_6adbc")
 name = "hallway_door_interior"
 description = ""
 position_x = -784.0
 position_y = -320.0
 
-[sub_resource type="Resource" id="Resource_21uc3"]
+[sub_resource type="Resource" id="Resource_iuoj7"]
 script = ExtResource("1_6adbc")
 name = "forum_door_exterior"
 description = ""
 position_x = -416.0
 position_y = -320.0
 
-[sub_resource type="Resource" id="Resource_e4tps"]
+[sub_resource type="Resource" id="Resource_gbr7s"]
 script = ExtResource("1_6adbc")
 name = "forum_door_interior"
 description = ""
 position_x = 23.0
 position_y = -312.0
 
-[sub_resource type="Resource" id="Resource_fk4nt"]
+[sub_resource type="Resource" id="Resource_tqct5"]
 script = ExtResource("1_6adbc")
 name = "item"
 description = ""
 position_x = -330.0
 position_y = -102.0
 
-[sub_resource type="Resource" id="Resource_xv5ck"]
+[sub_resource type="Resource" id="Resource_n5718"]
 script = ExtResource("1_6adbc")
 name = "ghost"
 description = ""
@@ -61,4 +61,4 @@ position_y = -53.0
 
 [resource]
 script = ExtResource("2_bcysm")
-items = Array[ExtResource("1_6adbc")]([SubResource("Resource_lxnca"), SubResource("Resource_688tb"), SubResource("Resource_0xl2h"), SubResource("Resource_8el4m"), SubResource("Resource_21uc3"), SubResource("Resource_e4tps"), SubResource("Resource_fk4nt"), SubResource("Resource_xv5ck")])
+items = Array[ExtResource("1_6adbc")]([SubResource("Resource_nhqh4"), SubResource("Resource_7rxue"), SubResource("Resource_th2dp"), SubResource("Resource_6axvf"), SubResource("Resource_iuoj7"), SubResource("Resource_gbr7s"), SubResource("Resource_tqct5"), SubResource("Resource_n5718")])
