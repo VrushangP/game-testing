@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://eukl3nsi4tdi"]
+
+[ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_agh4e"]
+[ext_resource type="Script" path="res://Save/save_character.gd" id="2_nbr5v"]
+
+[resource]
+script = ExtResource("2_nbr5v")
+display_name = "blank_save"
+level = 6
+experience = 6
+strength = 6
+endurance = 6
+intelligence = 6
+pos_x = 60
+pos_y = 60
+inventory = ExtResource("1_agh4e")

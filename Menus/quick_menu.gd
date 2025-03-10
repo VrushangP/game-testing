@@ -1,5 +1,8 @@
 extends Control
 
+@onready var player = get_tree().get_first_node_in_group("Guard1")
+@export var save_path: String = "res://Menus/save_files.tres"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,3 +31,8 @@ func _on_options_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()	
+
+
+func save_data():
+	pass
+	

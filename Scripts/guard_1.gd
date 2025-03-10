@@ -3,8 +3,14 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -250.0
 @export var inventory: Current_Inventory
+@export var character: Character
+
+@export var save_path: String = "res://Menus/save_files.tres"
 
 var map_type = 0
+
+func _ready() -> void:
+	load_character()
 
 func _physics_process(delta: float) -> void:
 
@@ -38,3 +44,16 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+
+func load_character ():
+	character = Character.new()
+
+	var blank_save_resource = load(save_path)
+	character.display_name = blank_save_resource.display_name
+	character.level = blank_save_resource.level
+	character.experience = blank_save_resource.experience
+	character.endurance = blank_save_resource.endurance
+	character.strength = blank_save_resource.strength
+	character.intelligence = blank_save_resource.intelligence
+	position.x = blank_save_resource.pos_x
+	position.y = blank_save_resource.pos_y

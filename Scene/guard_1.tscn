@@ -1,9 +1,30 @@
-[gd_scene load_steps=35 format=3 uid="uid://bkms70es04f5s"]
+[gd_scene load_steps=37 format=3 uid="uid://bkms70es04f5s"]
 
 [ext_resource type="Script" path="res://Scripts/guard_1.gd" id="1_hfh4o"]
 [ext_resource type="Texture2D" uid="uid://k4wirv18upyk" path="res://Assets/sprites/knight.png" id="1_xq37i"]
 [ext_resource type="Resource" uid="uid://fw5jhsyueyrx" path="res://Inventory/player_inventory.tres" id="2_7b3ic"]
 [ext_resource type="PackedScene" uid="uid://68jyyt6ur3vn" path="res://Inventory/inventory_ui.tscn" id="4_joqkg"]
+
+[sub_resource type="GDScript" id="GDScript_2i728"]
+script/source = "extends Resource
+class_name Player_Character 
+
+@export var display_name := \"\"
+@export var level := 1 
+@export var experience := 0
+@export var strength := 5
+@export var endurance := 5 
+@export var intelligence := 5
+"
+
+[sub_resource type="Resource" id="Resource_6ohat"]
+script = SubResource("GDScript_2i728")
+display_name = "Norm Hull"
+level = 5
+experience = 500
+strength = 5
+endurance = 7
+intelligence = 5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8l501"]
 atlas = ExtResource("1_xq37i")
@@ -236,6 +257,7 @@ size = Vector2(12, 12.875)
 collision_layer = 2
 script = ExtResource("1_hfh4o")
 inventory = ExtResource("2_7b3ic")
+character = SubResource("Resource_6ohat")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -5.36)
