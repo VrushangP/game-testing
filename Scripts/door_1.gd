@@ -12,7 +12,6 @@ func _ready():
 func _on_interact():
 	print("Interaction triggered!")
 	ScreenFilter.fade_to_darkness()
-	
 	await get_tree().create_timer(0.6).timeout
 
 	for i in range(item_location.items.size()):

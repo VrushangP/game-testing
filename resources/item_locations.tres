@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item_Locations" load_steps=11 format=3]
+[gd_resource type="Resource" script_class="Item_Locations" load_steps=11 format=3 uid="uid://caj2qemd6mukc"]
 
 [ext_resource type="Script" path="res://resources/item_description.gd" id="1_6adbc"]
 [ext_resource type="Script" path="res://resources/item_locations.gd" id="2_bcysm"]

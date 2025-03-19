@@ -13,13 +13,11 @@ func _ready() -> void:
 	load_character()
 
 func _physics_process(delta: float) -> void:
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if map_type == 0:
 		var direction_x := Input.get_axis("ui_left", "ui_right")
 		var direction_y := Input.get_axis("ui_up", "ui_down")
-
 		if direction_x:
 			velocity.x = direction_x * SPEED
 		else:
